@@ -42,7 +42,7 @@
             </div>
             <div class="text-base-content/70 bg-base-200 px-5 py-3 rounded-2xl shadow">
                 <p>Rejected</p>
-                <p id="RejectedCount">0</p>
+                <p id="rejectedCount">0</p>
             </div>
         </div>
         <hr class="my-7">
@@ -54,12 +54,12 @@
             <p class="text-base-content/70">8 Jobs</p>
         </div>
         <div class="">
-            <button class="btn bg-primary/80 text-white">Total</button>
-            <button class="btn bg-gray-50">Interview</button>
-            <button class="btn bg-gray-50">Rejected</button>
+            <button onclick="toggleStyle('total-filter-btn')" id="total-filter-btn" class="btn bg-primary/80 text-white">Total</button>
+            <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="btn bg-gray-50">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn bg-gray-50">Rejected</button>
         </div>
     
-        <section id="allCards" class="w-11/12 m-auto space-y-4">
+        <section id="allCards" class="w-11/12 m-auto space-y-4 mb-6">
             <div class="card-1 flex justify-between bg-gray-100 p-3 rounded-2xl">
                 <div class="left-part">
                     <h3 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h3>
@@ -245,5 +245,7 @@
             </div>
         </section>
     </main>
+
+    <script src="./script/script.js"></script>
 </body>
 </html>
