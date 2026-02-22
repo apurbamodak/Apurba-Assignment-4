@@ -123,6 +123,28 @@ mainContainer.addEventListener("click", function (event) {
 
         calculateCount();
 
+    } else if (event.target.closest('.delete')) {
+
+        const cardParentNode = event.target.closest('.card');
+
+        interviewList = interviewList.filter(item =>
+            item.cardParentNode != cardParentNode
+        );
+        rejectedList = rejectedList.filter(item =>
+            item.cardParentNode != cardParentNode
+        );
+
+        cardParentNode.remove();
+
+        calculateCount();
+        if (currentStatus == 'interview-filter-btn') {
+            randerInterview();
+        }
+
+        if (currentStatus == 'rejected-filter-btn') {
+            randerReject();
+        }
+
     }
 
 })
