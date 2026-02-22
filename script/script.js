@@ -125,8 +125,7 @@ mainContainer.addEventListener("click", function (event) {
 
     } else if (event.target.closest('.delete')) {
 
-        const cardParentNode = event.target.closest('.card');
-        console.log(cardParentNode)
+        const cardParentNode = event.target.closest(".card");
 
         interviewList = interviewList.filter(item => item.cardParentNode != cardParentNode);
 
