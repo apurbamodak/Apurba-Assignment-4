@@ -123,35 +123,6 @@ mainContainer.addEventListener("click", function (event) {
 
         calculateCount();
 
-    } else if (event.target.closest('.delete')) {
-
-        const cardParentNode = event.target.closest('.card');
-
-        // remove from interview list
-        interviewList = interviewList.filter(item =>
-            item.cardParentNode != cardParentNode
-        );
-
-        // remove from rejected list
-        rejectedList = rejectedList.filter(item =>
-            item.cardParentNode != cardParentNode
-        );
-
-        // remove from screen
-        cardParentNode.remove();
-
-        // update count
-        calculateCount();
-
-        // re-render filtered section if open
-        if (currentStatus == 'interview-filter-btn') {
-            randerInterview();
-        }
-
-        if (currentStatus == 'rejected-filter-btn') {
-            randerReject();
-        }
-
     }
 
 })
